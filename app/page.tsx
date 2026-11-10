@@ -8,6 +8,7 @@ import { MotionPreview } from "@/components/home/MotionPreview";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { FinalCta } from "@/components/home/FinalCta";
 import { siteConfig, canonicalFor } from "@/lib/site-config";
+import ImmersiveMotion from "@/components/ImmersiveMotion";
 
 export const metadata: Metadata = {
   title: { absolute: `${siteConfig.name} — We build what's next` },
@@ -18,7 +19,12 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+<section className="relative h-screen overflow-hidden bg-black">
+  <ImmersiveMotion />
+
+</section>
       <Hero />
+
       <Intro />
       <FeaturedWork />
       <WebDevShowcase />
